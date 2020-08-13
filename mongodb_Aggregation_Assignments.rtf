@@ -1,0 +1,410 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.18362}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\b\f0\fs24\lang9 MongoDB -Aggregation Exercises\par
+\b0 Import the zips.json file into your MongoDB. Database name is "population" and\par
+collection name is "zipcodes".\par
+mongoimport --db population --collection zipcodes --file zips.json\par
+\b\fs28 Atlanta Population\par
+1. use db.zipcodes.find() to filter results to only the results where city is ATLANTA\par
+and state is GA.\par
+
+\pard\li720\sa200\sl276\slmult1\fs22  db.zipcodes.find(\{$and: [\{"city": "ATLANTA"\}, \{"state": "GA"\}]\}).pretty()\b0\par
+\{\par
+        "_id" : "30303",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.388846,\par
+                33.752504\par
+        ],\par
+        "pop" : 1845,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30305",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.385145,\par
+                33.831963\par
+        ],\par
+        "pop" : 19122,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30306",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.351418,\par
+                33.786027\par
+        ],\par
+        "pop" : 20081,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30307",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.335957,\par
+                33.769138\par
+        ],\par
+        "pop" : 16330,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30308",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.375744,\par
+                33.771839\par
+        ],\par
+        "pop" : 8549,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30309",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.388338,\par
+                33.798407\par
+        ],\par
+        "pop" : 14766,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30310",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.423173,\par
+                33.727849\par
+        ],\par
+        "pop" : 34017,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30311",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.470219,\par
+                33.722957\par
+        ],\par
+        "pop" : 34880,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30312",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.378125,\par
+                33.746749\par
+        ],\par
+        "pop" : 17683,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30313",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.39352,\par
+                33.76825\par
+        ],\par
+        "pop" : 8038,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30314",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.425546,\par
+                33.756103\par
+        ],\par
+        "pop" : 26649,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30315",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.380771,\par
+                33.705062\par
+        ],\par
+        "pop" : 41061,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30316",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.333913,\par
+                33.721686\par
+        ],\par
+        "pop" : 34668,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30317",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.31685,\par
+                33.749788\par
+        ],\par
+        "pop" : 16395,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30318",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.445432,\par
+                33.786454\par
+        ],\par
+        "pop" : 53894,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30319",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.335091,\par
+                33.868728\par
+        ],\par
+        "pop" : 32138,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30324",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.354867,\par
+                33.820609\par
+        ],\par
+        "pop" : 15044,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30326",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.358232,\par
+                33.848168\par
+        ],\par
+        "pop" : 125,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30327",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.419966,\par
+                33.862723\par
+        ],\par
+        "pop" : 18467,\par
+        "state" : "GA"\par
+\}\par
+\{\par
+        "_id" : "30329",\par
+        "city" : "ATLANTA",\par
+        "loc" : [\par
+                -84.321402,\par
+                33.823555\par
+        ],\par
+        "pop" : 17013,\par
+        "state" : "GA"\par
+\}\par
+
+\pard\sa200\sl276\slmult1\b\fs28 2. use db.zipcodes.aggregate with $match to do the same as above.\par
+
+\pard\li720\sa200\sl276\slmult1\fs22 > db.zipcodes.aggregate(\{$match: \{"city": "ATLANTA"\}\},\{$match: \{"state": "GA"\}\})\b0\par
+\{ "_id" : "30303", "city" : "ATLANTA", "loc" : [ -84.388846, 33.752504 ], "pop" : 1845, "state" : "GA" \}\par
+\{ "_id" : "30305", "city" : "ATLANTA", "loc" : [ -84.385145, 33.831963 ], "pop" : 19122, "state" : "GA" \}\par
+\{ "_id" : "30306", "city" : "ATLANTA", "loc" : [ -84.351418, 33.786027 ], "pop" : 20081, "state" : "GA" \}\par
+\{ "_id" : "30307", "city" : "ATLANTA", "loc" : [ -84.335957, 33.769138 ], "pop" : 16330, "state" : "GA" \}\par
+\{ "_id" : "30308", "city" : "ATLANTA", "loc" : [ -84.375744, 33.771839 ], "pop" : 8549, "state" : "GA" \}\par
+\{ "_id" : "30309", "city" : "ATLANTA", "loc" : [ -84.388338, 33.798407 ], "pop" : 14766, "state" : "GA" \}\par
+\{ "_id" : "30310", "city" : "ATLANTA", "loc" : [ -84.423173, 33.727849 ], "pop" : 34017, "state" : "GA" \}\par
+\{ "_id" : "30311", "city" : "ATLANTA", "loc" : [ -84.470219, 33.722957 ], "pop" : 34880, "state" : "GA" \}\par
+\{ "_id" : "30312", "city" : "ATLANTA", "loc" : [ -84.378125, 33.746749 ], "pop" : 17683, "state" : "GA" \}\par
+\{ "_id" : "30313", "city" : "ATLANTA", "loc" : [ -84.39352, 33.76825 ], "pop" : 8038, "state" : "GA" \}\par
+\{ "_id" : "30314", "city" : "ATLANTA", "loc" : [ -84.425546, 33.756103 ], "pop" : 26649, "state" : "GA" \}\par
+\{ "_id" : "30315", "city" : "ATLANTA", "loc" : [ -84.380771, 33.705062 ], "pop" : 41061, "state" : "GA" \}\par
+\{ "_id" : "30316", "city" : "ATLANTA", "loc" : [ -84.333913, 33.721686 ], "pop" : 34668, "state" : "GA" \}\par
+\{ "_id" : "30317", "city" : "ATLANTA", "loc" : [ -84.31685, 33.749788 ], "pop" : 16395, "state" : "GA" \}\par
+\{ "_id" : "30318", "city" : "ATLANTA", "loc" : [ -84.445432, 33.786454 ], "pop" : 53894, "state" : "GA" \}\par
+\{ "_id" : "30319", "city" : "ATLANTA", "loc" : [ -84.335091, 33.868728 ], "pop" : 32138, "state" : "GA" \}\par
+\{ "_id" : "30324", "city" : "ATLANTA", "loc" : [ -84.354867, 33.820609 ], "pop" : 15044, "state" : "GA" \}\par
+\{ "_id" : "30326", "city" : "ATLANTA", "loc" : [ -84.358232, 33.848168 ], "pop" : 125, "state" : "GA" \}\par
+\{ "_id" : "30327", "city" : "ATLANTA", "loc" : [ -84.419966, 33.862723 ], "pop" : 18467, "state" : "GA" \}\par
+\{ "_id" : "30329", "city" : "ATLANTA", "loc" : [ -84.321402, 33.823555 ], "pop" : 17013, "state" : "GA" \}\par
+Type "it" for more\par
+
+\pard\sa200\sl276\slmult1\b\fs28 3. use $group to count the number of zip codes in Atlanta.\par
+
+\pard\li720\sa200\sl276\slmult1\fs22 > db.zipcodes.aggregate([\{$match: \{"city": "ATLANTA"\}\}, \{$group: \{_id: "$city", "city":\{$sum: 1\}\}\}])\par
+\{ "_id" : "ATLANTA", "city" : 41 \}\par
+\par
+
+\pard\sa200\sl276\slmult1\fs28 4. use $group to find the total population in Atlanta.\par
+
+\pard\li720\sa200\sl276\slmult1\fs22\par
+> db.zipcodes.aggregate([\{$match: \{"city": "ATLANTA"\}\}, \{$group: \{_id: "$city", "city":\{$sum: "$pop"\}\}\}])\par
+\{ "_id" : "ATLANTA", "city" : 630046 \}\par
+
+\pard\sa200\sl276\slmult1\fs28\par
+Populations By State\par
+\par
+1. use aggregate to calculate the total population for each state\par
+
+\pard\li720\sa200\sl276\slmult1\fs22 > db.zipcodes.aggregate( \{$group: \{_id: "$state", "state_pop":\{$sum: "$pop"\}\}\})\b0\par
+\{ "_id" : "PA", "state_pop" : 11881643 \}\par
+\{ "_id" : "VT", "state_pop" : 562758 \}\par
+\{ "_id" : "WI", "state_pop" : 4891769 \}\par
+\{ "_id" : "NC", "state_pop" : 6628637 \}\par
+\{ "_id" : "LA", "state_pop" : 4217595 \}\par
+\{ "_id" : "UT", "state_pop" : 1722850 \}\par
+\{ "_id" : "IL", "state_pop" : 11427576 \}\par
+\{ "_id" : "FL", "state_pop" : 12686644 \}\par
+\{ "_id" : "GA", "state_pop" : 6478216 \}\par
+\{ "_id" : "AR", "state_pop" : 2350725 \}\par
+\{ "_id" : "WA", "state_pop" : 4866692 \}\par
+\{ "_id" : "AL", "state_pop" : 4040587 \}\par
+\{ "_id" : "HI", "state_pop" : 1108229 \}\par
+\{ "_id" : "MI", "state_pop" : 9295297 \}\par
+\{ "_id" : "WV", "state_pop" : 1793146 \}\par
+\{ "_id" : "IA", "state_pop" : 2776420 \}\par
+\{ "_id" : "TX", "state_pop" : 16984601 \}\par
+\{ "_id" : "AK", "state_pop" : 544698 \}\par
+\{ "_id" : "MS", "state_pop" : 2573216 \}\par
+\{ "_id" : "DE", "state_pop" : 666168 \}\par
+Type "it" for more\par
+
+\pard\sa200\sl276\slmult1\b\fs28 2. sort the results by population, highest first\par
+
+\pard\li720\sa200\sl276\slmult1\fs22 > db.zipcodes.aggregate([ \{$group: \{_id: "$state", "state_pop":\{$sum: "$pop"\}\}\}, \{$sort: \{state_pop : -1\}\} ])\b0\par
+\{ "_id" : "CA", "state_pop" : 29754890 \}\par
+\{ "_id" : "NY", "state_pop" : 17990402 \}\par
+\{ "_id" : "TX", "state_pop" : 16984601 \}\par
+\{ "_id" : "FL", "state_pop" : 12686644 \}\par
+\{ "_id" : "PA", "state_pop" : 11881643 \}\par
+\{ "_id" : "IL", "state_pop" : 11427576 \}\par
+\{ "_id" : "OH", "state_pop" : 10846517 \}\par
+\{ "_id" : "MI", "state_pop" : 9295297 \}\par
+\{ "_id" : "NJ", "state_pop" : 7730188 \}\par
+\{ "_id" : "NC", "state_pop" : 6628637 \}\par
+\{ "_id" : "GA", "state_pop" : 6478216 \}\par
+\{ "_id" : "VA", "state_pop" : 6181479 \}\par
+\{ "_id" : "IN", "state_pop" : 5544136 \}\par
+\{ "_id" : "MO", "state_pop" : 5110648 \}\par
+\{ "_id" : "WI", "state_pop" : 4891769 \}\par
+\{ "_id" : "TN", "state_pop" : 4876457 \}\par
+\{ "_id" : "WA", "state_pop" : 4866692 \}\par
+\{ "_id" : "MD", "state_pop" : 4781379 \}\par
+\{ "_id" : "MN", "state_pop" : 4372982 \}\par
+\{ "_id" : "LA", "state_pop" : 4217595 \}\b\fs28\par
+
+\pard\sa200\sl276\slmult1 3. limit the results to just the first 3 results. What are the top 3 states in\par
+population?\par
+
+\pard\li720\sa200\sl276\slmult1\fs22 > db.zipcodes.aggregate([ \{$group: \{_id: "$state", "state_pop":\{$sum: "$pop"\}\}\}, \{$sort: \{state_pop : -1\}\}, \{$limit: 3\} ])\b0\par
+\{ "_id" : "CA", "state_pop" : 29754890 \}\par
+\{ "_id" : "NY", "state_pop" : 17990402 \}\par
+\{ "_id" : "TX", "state_pop" : 16984601 \}\par
+\par
+
+\pard\sa200\sl276\slmult1\b\fs36 Populations by City\fs28\par
+1. use aggregate to calculate the total population for each city (you have to use\par
+city/state combination). You can use a combination for the _id of the $group: \{\par
+city: '$city', state: '$state' \}\par
+
+\pard\li720\sa200\sl276\slmult1\fs22 > db.zipcodes.aggregate( \{$group: \{_id: \{city: "$city" , state: "$state"\}, "city_pop":\{$sum: "$pop"\}\}\})\par
+\b0\{ "_id" : \{ "city" : "CAMP WOOD", "state" : "TX" \}, "city_pop" : 1017 \}\par
+\{ "_id" : \{ "city" : "ROME CITY", "state" : "IN" \}, "city_pop" : 3040 \}\par
+\{ "_id" : \{ "city" : "HARROLD", "state" : "SD" \}, "city_pop" : 195 \}\par
+\{ "_id" : \{ "city" : "SALEM", "state" : "OH" \}, "city_pop" : 26756 \}\par
+\{ "_id" : \{ "city" : "BIRCH RIVER", "state" : "WV" \}, "city_pop" : 1440 \}\par
+\{ "_id" : \{ "city" : "MICO", "state" : "TX" \}, "city_pop" : 230 \}\par
+\{ "_id" : \{ "city" : "DENTON", "state" : "MD" \}, "city_pop" : 7126 \}\par
+\{ "_id" : \{ "city" : "HARRISBURG", "state" : "PA" \}, "city_pop" : 79768 \}\par
+\{ "_id" : \{ "city" : "PINE VILLAGE", "state" : "IN" \}, "city_pop" : 1310 \}\par
+\{ "_id" : \{ "city" : "HILLSBORO", "state" : "VA" \}, "city_pop" : 5373 \}\par
+\{ "_id" : \{ "city" : "SWAN", "state" : "IA" \}, "city_pop" : 691 \}\par
+\{ "_id" : \{ "city" : "CRAFTSBURY", "state" : "VT" \}, "city_pop" : 623 \}\par
+\{ "_id" : \{ "city" : "FARRAGUT", "state" : "IA" \}, "city_pop" : 1055 \}\par
+\{ "_id" : \{ "city" : "MAPPSVILLE", "state" : "VA" \}, "city_pop" : 835 \}\par
+\{ "_id" : \{ "city" : "HAMPTONVILLE", "state" : "NC" \}, "city_pop" : 4691 \}\par
+\{ "_id" : \{ "city" : "VICTORIA", "state" : "MN" \}, "city_pop" : 1367 \}\par
+\{ "_id" : \{ "city" : "FRANCISCO", "state" : "IN" \}, "city_pop" : 1503 \}\par
+\{ "_id" : \{ "city" : "MIAMI SHORES", "state" : "FL" \}, "city_pop" : 30108 \}\par
+\{ "_id" : \{ "city" : "HIRAM", "state" : "OH" \}, "city_pop" : 3775 \}\par
+\{ "_id" : \{ "city" : "POPLAR", "state" : "MT" \}, "city_pop" : 3407 \}\b\fs28\par
+
+\pard\sa200\sl276\slmult1 2. sort the results by population, highest first\par
+
+\pard\li720\sa200\sl276\slmult1\fs22 > db.zipcodes.aggregate([ \{$group: \{_id: \{city: "$city" , state: "$state"\}, "city_pop":\{$sum: "$pop"\}\}\}, \{$sort: \{city_pop: -1\}\}])\par
+\b0\{ "_id" : \{ "city" : "CHICAGO", "state" : "IL" \}, "city_pop" : 2452177 \}\par
+\{ "_id" : \{ "city" : "BROOKLYN", "state" : "NY" \}, "city_pop" : 2300504 \}\par
+\{ "_id" : \{ "city" : "LOS ANGELES", "state" : "CA" \}, "city_pop" : 2102295 \}\par
+\{ "_id" : \{ "city" : "HOUSTON", "state" : "TX" \}, "city_pop" : 2095918 \}\par
+\{ "_id" : \{ "city" : "PHILADELPHIA", "state" : "PA" \}, "city_pop" : 1610956 \}\par
+\{ "_id" : \{ "city" : "NEW YORK", "state" : "NY" \}, "city_pop" : 1476790 \}\par
+\{ "_id" : \{ "city" : "BRONX", "state" : "NY" \}, "city_pop" : 1209548 \}\par
+\{ "_id" : \{ "city" : "SAN DIEGO", "state" : "CA" \}, "city_pop" : 1049298 \}\par
+\{ "_id" : \{ "city" : "DETROIT", "state" : "MI" \}, "city_pop" : 963243 \}\par
+\{ "_id" : \{ "city" : "DALLAS", "state" : "TX" \}, "city_pop" : 940191 \}\par
+\{ "_id" : \{ "city" : "PHOENIX", "state" : "AZ" \}, "city_pop" : 890853 \}\par
+\{ "_id" : \{ "city" : "MIAMI", "state" : "FL" \}, "city_pop" : 825232 \}\par
+\{ "_id" : \{ "city" : "SAN JOSE", "state" : "CA" \}, "city_pop" : 816653 \}\par
+\{ "_id" : \{ "city" : "SAN ANTONIO", "state" : "TX" \}, "city_pop" : 811792 \}\par
+\{ "_id" : \{ "city" : "BALTIMORE", "state" : "MD" \}, "city_pop" : 733081 \}\par
+\{ "_id" : \{ "city" : "SAN FRANCISCO", "state" : "CA" \}, "city_pop" : 723993 \}\par
+\{ "_id" : \{ "city" : "MEMPHIS", "state" : "TN" \}, "city_pop" : 632837 \}\par
+\{ "_id" : \{ "city" : "SACRAMENTO", "state" : "CA" \}, "city_pop" : 628279 \}\par
+\{ "_id" : \{ "city" : "JACKSONVILLE", "state" : "FL" \}, "city_pop" : 610160 \}\par
+\{ "_id" : \{ "city" : "ATLANTA", "state" : "GA" \}, "city_pop" : 609591 \}\b\fs28\par
+
+\pard\sa200\sl276\slmult1 3. limit the results to just the first 3 results. What are the top 3 cities in\par
+population?\par
+
+\pard\li720\sa200\sl276\slmult1\fs22 > db.zipcodes.aggregate([ \{$group: \{_id: \{city: "$city" , state: "$state"\}, "city_pop":\{$sum: "$pop"\}\}\}, \{$sort: \{city_pop: -1\}\}, \{$limit: 3\}])\par
+\b0\{ "_id" : \{ "city" : "CHICAGO", "state" : "IL" \}, "city_pop" : 2452177 \}\par
+\{ "_id" : \{ "city" : "BROOKLYN", "state" : "NY" \}, "city_pop" : 2300504 \}\par
+\{ "_id" : \{ "city" : "LOS ANGELES", "state" : "CA" \}, "city_pop" : 2102295 \}\b\fs28\par
+
+\pard\sa200\sl276\slmult1 4. What are the top 3 cities in population in Texas?\par
+
+\pard\li720\sa200\sl276\slmult1\fs22 > db.zipcodes.aggregate([ \{$match: \{"state": "TX"\}\},\{$group: \{_id: \{city: "$city" , state: "$state"\}, "city_pop":\{$sum: "$pop"\}\}\}, \{$sort: \{city_pop: -1\}\}, \{$limit: 3\}])\par
+\b0\{ "_id" : \{ "city" : "HOUSTON", "state" : "TX" \}, "city_pop" : 2095918 \}\par
+\{ "_id" : \{ "city" : "DALLAS", "state" : "TX" \}, "city_pop" : 940191 \}\par
+\{ "_id" : \{ "city" : "SAN ANTONIO", "state" : "TX" \}, "city_pop" : 811792 \}\b\fs28\par
+
+\pard\sa200\sl276\slmult1 Bonus\par
+1. Write a query to get the average city population for each state.\par
+
+\pard\li720\sa200\sl276\slmult1\fs22 > db.zipcodes.aggregate( \{$group: \{_id: "$state", "avg_city_pop":\{$avg: "$pop"\}\}\})\b0\par
+\{ "_id" : "MT", "avg_city_pop" : 2544.420382165605 \}\par
+\{ "_id" : "KS", "avg_city_pop" : 3461.937062937063 \}\par
+\{ "_id" : "FL", "avg_city_pop" : 15779.407960199005 \}\par
+\{ "_id" : "IL", "avg_city_pop" : 9238.137429264349 \}\par
+\{ "_id" : "AR", "avg_city_pop" : 4066.998269896194 \}\par
+\{ "_id" : "GA", "avg_city_pop" : 10201.914960629922 \}\par
+\{ "_id" : "AL", "avg_city_pop" : 7126.255731922399 \}\par
+\{ "_id" : "HI", "avg_city_pop" : 13852.8625 \}\par
+\{ "_id" : "WA", "avg_city_pop" : 10055.148760330578 \}\par
+\{ "_id" : "PA", "avg_city_pop" : 8149.275034293552 \}\par
+\{ "_id" : "VT", "avg_city_pop" : 2315.8765432098767 \}\par
+\{ "_id" : "WI", "avg_city_pop" : 6832.079608938548 \}\par
+\{ "_id" : "AK", "avg_city_pop" : 2793.3230769230768 \}\par
+\{ "_id" : "NC", "avg_city_pop" : 9402.321985815603 \}\par
+\{ "_id" : "LA", "avg_city_pop" : 9089.644396551725 \}\par
+\{ "_id" : "UT", "avg_city_pop" : 8404.146341463415 \}\par
+\{ "_id" : "SC", "avg_city_pop" : 9962.00857142857 \}\par
+\{ "_id" : "OH", "avg_city_pop" : 10771.119165839125 \}\par
+\{ "_id" : "NM", "avg_city_pop" : 5489.380434782609 \}\par
+\{ "_id" : "MA", "avg_city_pop" : 15338 \}\par
+
+\pard\sa200\sl276\slmult1\b\fs28 2. What are the top 3 states in terms of average city population?\par
+
+\pard\li720\sa200\sl276\slmult1\fs22 > db.zipcodes.aggregate([ \{$group: \{_id: "$city", "avg_city_pop":\{$avg: "$pop"\}\}\}, \{$limit: 3\}])\b0\par
+\{ "_id" : "MERION STATION", "avg_city_pop" : 5633 \}\par
+\{ "_id" : "PICKETT", "avg_city_pop" : 518 \}\par
+\{ "_id" : "GOODWIN", "avg_city_pop" : 597 \}\par
+\par
+}
+ 
